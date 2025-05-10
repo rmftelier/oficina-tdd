@@ -20,6 +20,12 @@ class Queue {
   dequeue() {
     return this.elements.shift();
   }
+
+
+  isEmpty() {
+    return this.elements.length === 0;
+  }
+
 }
 
 module.exports = Queue

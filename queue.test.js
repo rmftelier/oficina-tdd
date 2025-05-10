@@ -9,6 +9,7 @@ describe('Queue', () => {
 
   it('Deve criar uma fila', () => {
     expect(queue).toEqual({ elements: [] })
+    expect(queue.isEmpty()).toBe(true)
   })
 
   it('Deve ser capaz de calcular o tamanho da fila', () => {
@@ -19,6 +20,7 @@ describe('Queue', () => {
     queue.add('a')
     expect(queue.size()).toEqual(1)
     expect(queue.peek()).toBe('a')
+    expect(queue.isEmpty()).toBe(false)
   })
 
   it('Deve escolher o primeiro item da fila', () => {
